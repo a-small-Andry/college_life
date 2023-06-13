@@ -1,0 +1,331 @@
+\null\par
+\section{实验一\hspace{1em}水环境质量现状评价}
+\subsection{教学目的与要求}
+
+\noindent\textbf{教学目的：}通过几组水环境质量参数现状数据实例来进行水环境质量现状评价。
+\newline\textbf{教学要求：}掌握标准指数法和内梅罗水质指数在水环境质量评价中的应用。
+
+
+\subsection{实验报告背景}
+\subsubsection[水质指数法]{水质指数法\protect\cite{HJ2.3-2018}}
+
+\paragraph*{一般性水质因子（随着浓度增加而水质变差的水质因子）的指数计算公式：}
+\begin{equation} \label{eq:General water quality factors}
+    S_{i,j}=\dfrac{C_{i,j}}{C_{si}}
+\end{equation}
+式中：
+$S_{i,j}$——评价因子 $i$ 的水质指数，大于1表明该水质因子超标；
+\newline\phantom{式中：}$C_{i,j}$——评价因子 $i$ 在 $j$ 点的实测统计代表值，mg/L；
+\newline\phantom{式中：}$C_{si}$——评价因子 $i$ 的水质评价标准限值，mg/L。
+
+\paragraph*{溶解氧（DO）的标准指数计算公式：}
+\begin{equation} \label{eq:DO}
+    S_{\mathrm{DO},j} = 
+    \begin{cases}
+        \dfrac{\mathrm{DO_s}}{\mathrm{DO}_j} &\qquad \mathrm{DO}_j \leqslant \mathrm{DO_f} \\
+        & \\
+        \dfrac{\left\lvert \mathrm{DO_f}-\mathrm{DO}_j \right\rvert}{\mathrm{DO_f}-\mathrm{DO_s}} &\qquad \mathrm{DO}_j > \mathrm{DO_f}
+    \end{cases}
+\end{equation}
+式中：
+$S_{DO,j}$——溶解氧的标准指数，大于1表明该水质因子超标；
+\newline\phantom{式中：}$\mathrm{DO}_j$——溶解氧在 $j$ 点的实测统计代表值，mg/L；
+\newline\phantom{式中：}$\mathrm{DO_s}$——溶解氧的水质评价标准限值，mg/L；
+\newline\phantom{式中：}$\mathrm{DO_f}$——饱和溶解氧浓度，mg/L，对于河流，$\mathrm{DO_f}=468/(31.6+T)$，对于
+\newline\phantom{式中：$\mathrm{DO_f}$——}盐度比较高的湖泊、水库及入海河口、近岸海域，
+\newline\phantom{式中：$\mathrm{DO_f}$——}$\mathrm{DO_f}=(491-2.65S)/(33.5+T)$；
+\newline\phantom{式中：}$S$——实用盐度符号，量纲一；
+\newline\phantom{式中：}$T$——水温，℃。
+
+\paragraph*{pH值的指数计算公式：}
+\begin{equation} \label{eq:pH}
+    S_{\mathrm{pH},j} = 
+    \begin{cases}
+        \dfrac{7.0-\mathrm{pH}_j}{7.0-\mathrm{pH_{sd}}} &\qquad \mathrm{pH}_j \leqslant 7.0 \\
+        & \\
+        \dfrac{\mathrm{pH}_j-7.0}{\mathrm{pH_{su}}-7.0} &\qquad \mathrm{pH}_j > 7.0
+    \end{cases}
+\end{equation}
+式中：
+$S_{\mathrm{pH},j}$——pH值的指数，大于1表明该水质因子超标；
+\newline\phantom{式中：}$\mathrm{pH}_j$——pH值实测统计代表值；
+\newline\phantom{式中：}$\mathrm{pH_{sd}}$——评价标准中pH值的下限值；
+\newline\phantom{式中：}$\mathrm{pH_{su}}$——评价标准中pH值的上限值。
+
+\paragraph*{内梅罗水质指数计算公式：}
+\begin{equation} \label{eq:Nemero Water Quality Index}
+    P_{\text{传统}} = \sqrt{\dfrac{F_{\text{最大}}^2+F_{\text{平均}}^2}{2}}
+\end{equation}
+式中：
+$P_{\text{传统}}$——传统内梅罗污染指数；
+\newline\phantom{式中：}$F_{\text{最大}}$——$F_i$的最大值；
+\newline\phantom{式中：}$F_{\text{平均}}$——$F_i$的平均值。
+
+
+\subsubsection{计算标准要求}
+
+\begin{enumerate}
+    \item 使用单项指数法（标准指数法）和内梅罗水质指数评价某项目环评监测点的水质。
+    \item 评价标准为《地表水环境质量标准》（GB3838-2002）中的Ⅲ类标准，各标准值见下表 \ref{tab:Environmental quality standards for surface water}。
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \caption{地表水环境质量标准\cite{GB3838-2002}}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{ccccccccccc}
+        \multicolumn{11}{r}{单位：mg/L，pH为无量纲，水温20℃} \\
+        \toprule
+        pH    & $\mathrm{COD_{Mn}}$ & $\mathrm{BOD_5}$  & DO    & SS    & 氨氮    & 总磷    & 总氮    & 石油类   & LAS   & 动植物油 \\
+        \midrule
+        $6\sim 9$   & $\leqslant 6$    & $\leqslant4$    & $\geqslant 5$    & $\leqslant100$  & $\leqslant1.0$  & $\leqslant0.05$ & $\leqslant1.0$  & $\leqslant0.05$ & $\leqslant0.2$  & $\leqslant0.05$ \\
+        \bottomrule
+    \end{tabular}}
+    \label{tab:Environmental quality standards for surface water}%
+\end{table}
+
+
+\subsection{报告主体内容}
+\subsubsection{水质情况}
+\begin{table}[H]
+    \centering
+    \caption{某项目环评水质监测点结果}
+    \begin{tabular}{cccccc}
+        \multicolumn{6}{r}{单位：mg/L，pH为无量纲} \\
+        \toprule
+        序号    & 污染物   & 红路水库北 & 红路水库南 & 石场水坑  & 流溪河灌渠 \\
+        \midrule
+        1     & pH    & 7.7   & 7.97  & 7.9   & 7.5 \\
+        2     & DO    & 7.0     & 6.8   & 7.3   & 6.1 \\
+        3     & $\mathrm{BOD_5}$  & 2$^{\mathrm{L}}$    & 2$^{\mathrm{L}}$     & 2$^{\mathrm{L}}$    & 3.05 \\
+        4     & $\mathrm{COD_{Mn}}$ & 5.3   & 5.3   & 1.8   & 3.23 \\
+        5     & 氨氮    & 0.26  & 0.24  & 0.05  & 0.27 \\
+        6     & SS    & 54.0    & 48.0    & 28.0    & 37.0 \\
+        7     & 总磷    & 0.04  & 0.11  & 0.10   & 0.18 \\
+        8     & 总氮    & 1.30   & 1.06  & 1.03  & 1.22 \\
+        9     & 石油类   & 0.2   & 0.21  & 0.02$^{\mathrm{L}}$ & 0.02$^{\mathrm{L}}$ \\
+        10    & LAS   & 0.14  & 0.13  & 0.05$^{\mathrm{L}}$ & 0.17 \\
+        11    & 动植物油  & 0.37  & 0.35  & 0.02$^{\mathrm{L}}$ & 0.45 \\
+        \bottomrule
+        \multicolumn{6}{l}{备注：低于最低检测浓度，结果以最低检出浓度右上角加L表示。} \\
+    \end{tabular}%
+    \label{tab:Results of water quality monitoring points for environmental impact assessment of a project}%
+\end{table}%
+
+
+\subsubsection{Excel处理步骤}
+\begin{enumerate}
+    \item 数据整合
+    \begin{enumerate}[label=(\arabic*)]
+        \item 根据《地表水环境质量标准》（GB3838-2002）中的 Ⅲ 类标准（见表 \ref{tab:Environmental quality standards for surface water}）和某项目环评水质监测点结果（见表 \ref{tab:Results of water quality monitoring points for environmental impact assessment of a project}）将它们穿插排列：
+        \begin{itemize}
+            \item 上行为水质监测点结果，下行为地表水环境质量标准；
+            \item 留出空位填写计算后相应的水质指数，并用横线将不同类别的污染物分开。
+        \end{itemize}
+        \item 再根据公式 \ref{eq:Nemero Water Quality Index} 的计算要求，在Excel末端插入三行空白栏位（分别为最大值、平均值和$P_{\text{传统}}$）；
+        \item 最后添加适当的分割线作为修饰，并绘制于 $\mathrm{A1:F26}$ 区域（版式效果可见表 \ref{tab:Evaluation of water quality parameters}）。
+    \end{enumerate}
+
+    \item pH 值的指数计算
+    \begin{enumerate}[label=(\arabic*)]
+        \item 根据公式 \ref{eq:pH} 计算要求，获取到评价标准中：
+        \begin{itemize}
+            \item pH 值的下限值 $\mathrm{pH_{sd}}=6$
+            \item pH 值的上限值 $\mathrm{pH_{su}}=9$
+        \end{itemize}
+        \item 然后通过IF函数对每个计算的值进行判断，以相对应的计算公式输出结果：
+        \begin{align*}
+            \mathrm{=IF(C\$2<=7,(7-C\$2)/(7-6),(C\$2-7)/(9-7))}
+        \end{align*}
+        \item 最后在pH栏位中依次向右自动填充。
+    \end{enumerate}
+    
+    \item 溶解氧（DO）的标准指数计算
+    \begin{enumerate}[label=(\arabic*)]
+        \item 根据公式 \ref{eq:DO} 计算要求，又因为该项目环评处于河流段，且水温为20℃，则饱和溶解氧浓度为：
+        $$\mathrm{DO_f}=468/(31.6+T)=468/(31.6+20) \;\text{mg/L}$$ 
+        \item 通过IF函数对每个计算的值进行判断，以相对应的计算公式输出结果：
+        \begin{align*}
+            = & \mathrm{IF(C\$4<=(468/(31.6+20)),5/C\$4,} \\
+            & \mathrm{ABS((468/(31.6+20))-C\$4)/((468/(31.6+20))-5))}
+        \end{align*}
+        \item 最后在DO栏位中依次向右自动填充。
+    \end{enumerate}
+    
+    \item 一般性水质因子的指数计算
+    
+    相较于pH 值的指数计算和溶解氧（DO）的标准指数计算，一般性水质因子的指数计算就显得非常简单，根据公式 \ref{eq:General water quality factors} 计算要求，输入计算公式后自动填充即可。
+
+    \item 创建Excel规则
+    
+    水质因子超标的要求是水质指数大于1，单单是自己一个一个比对的话，会非常吃力，但如果在Excel中建立相关规则就可以事半功倍。具体操作如下：
+    \begin{enumerate}[label=(\arabic*)]
+        \item 选中所有水质指数的计算单元格，点击“条件格式”中的“新建规则”；
+        \item 选择“使用公式确定要设置格式的单元格”并在“为符合此公式的值设置格式”中输入“$\mathrm{=C2>1}$”（C2为所有选中单元格的首个单元格）；
+        \item 将格式样式设置为单元格背景填充为红色。
+    \end{enumerate}
+    通过以上操作即可完成规则的创建，也就得到了表 \ref{tab:Evaluation of water quality parameters} 展示的效果。
+
+    \item 内梅罗水质指数$P_{\text{传统}}$的计算
+    
+    根据公式 \ref{eq:Nemero Water Quality Index} 要求，通过MAXIFS函数得到$F_{\text{最大}}$，AVERAGEIF函数得到$F_{\text{平均}}$，最后由计算公式得到 $P_{\text{传统}}$。以pH的操作举例：
+    \begin{enumerate}[label=(\arabic*)]
+        \item $F_{\text{最大}}$：$\mathrm{=MAXIFS(C\$1:C\$23,\$A\$1:\$A\$23,\text{"标准"})}$
+        \item $F_{\text{平均}}$：$\mathrm{=AVERAGEIF(\$A\$1:\$A\$23,\text{"标准"},C\$1:C\$23)}$
+        \item $P_{\text{传统}}$：$\mathrm{=((C\$24\text{\textasciicircum} 2+C\$25\text{\textasciicircum} 2)/2)\text{\textasciicircum} 0.5}$
+        \item 最后全部依次向右自动填充。
+    \end{enumerate}
+\end{enumerate}
+
+经过以上Excel的处理步骤，可以得到完整的水质参数评价结果，如下表 \ref{tab:Evaluation of water quality parameters} 所示。
+
+
+\subsubsection{水质参数评价结果与分析}
+% \begin{table}[H]
+%     \centering
+%     \caption{水质参数评价结果}
+%     \resizebox{\textwidth}{!}{
+%     \begin{tabular}{cc|cccc|cc|c}
+%         \specialrule{1pt}{0pt}{0pt} % 1pt是线宽
+%         序号    & 污染物   & 红路水库北 & 红路水库南 & 石场水坑  & 流溪河灌渠 & 最大值   & 平均值   & $P_{\text{传统}}$ \\
+%         \hline
+%         1     & pH    & 7.70  & 7.97  & 7.90  & 7.5   &       &       &  \\
+%         标准    & $6\sim 9$   & 0.350  & 0.485  & 0.450  & 0.250  & 0.485  & 0.3838  & 0.4373  \\
+%         \hline
+%         2     & DO    & 7.0   & 6.8   & 7.3   & 6.1   &       &       &  \\
+%         标准    & $\geqslant 5$    & 0.714  & 0.735  & 0.685  & 0.820  & 0.820  & 0.7385  & 0.7802  \\
+%         \hline
+%         3     & BOD$_5$  & 2     & 2     & 2     & 3.05  &       &       &  \\
+%         标准    & $\leqslant 4$    & 0.500  & 0.500  & 0.500  & 0.763  & 0.763  & 0.5656  & 0.6713  \\
+%         \hline
+%         4     & $\mathrm{COD_{Mn}}$ & 5.3   & 5.3   & 1.8   & 3.23  &       &       &  \\
+%         标准    & $\leqslant 6$    & 0.883  & 0.883  & 0.300  & 0.538  & 0.883  & 0.6513  & 0.7760  \\
+%         \hline
+%         5     & 氨氮    & 0.26  & 0.24  & 0.05  & 0.27  &       &       &  \\
+%         标准    & $\leqslant 1.0$  & 0.260  & 0.240  & 0.050  & 0.270  & 0.270  & 0.2050  & 0.2397  \\
+%         \hline
+%         6     & SS    & 54.0  & 48.0  & 28.0  & 37.0  &       &       &  \\
+%         标准    & $\leqslant 100$  & 0.540  & 0.480  & 0.280  & 0.370  & 0.540  & 0.4175  & 0.4827  \\
+%         \hline
+%         7     & 总磷    & 0.04  & 0.11  & 0.10  & 0.18  &       &       &  \\
+%         标准    & $\leqslant 0.05$ & 0.800  & \cellcolor[rgb]{ 1,  0,  0}2.200  & \cellcolor[rgb]{ 1,  0,  0}2.000  & \cellcolor[rgb]{ 1,  0,  0}3.600  & 3.600  & 2.1500  & \cellcolor[rgb]{ 1,  0,  0}2.9650  \\
+%         \hline
+%         8     & 总氮    & 1.30  & 1.06  & 1.03  & 1.22  &       &       &  \\
+%         标准    & $\leqslant 1.0$  & \cellcolor[rgb]{ 1,  0,  0}1.300  & \cellcolor[rgb]{ 1,  0,  0}1.060  & \cellcolor[rgb]{ 1,  0,  0}1.030  & \cellcolor[rgb]{ 1,  0,  0}1.220  & 1.300  & 1.1525  & \cellcolor[rgb]{ 1,  0,  0}1.2285  \\
+%         \hline
+%         9     & 石油类   & 0.20  & 0.21  & 0.02  & 0.02  &       &       &  \\
+%         标准    & $\leqslant 0.05$ & \cellcolor[rgb]{ 1,  0,  0}4.000  & \cellcolor[rgb]{ 1,  0,  0}4.200  & 0.400  & 0.400  & 4.200  & 2.2500  & \cellcolor[rgb]{ 1,  0,  0}3.3692  \\
+%         \hline
+%         10    & LAS   & 0.14  & 0.13  & 0.05  & 0.17  &       &       &  \\
+%         标准    & $\leqslant 0.2$  & 0.700  & 0.650  & 0.250  & 0.850  & 0.850  & 0.6125  & 0.7408  \\
+%         \hline
+%         11    & 动植物油  & 0.37  & 0.35  & 0.02  & 0.45  &       &       &  \\
+%         标准    & $\leqslant 0.05$ & \cellcolor[rgb]{ 1,  0,  0}7.400  & \cellcolor[rgb]{ 1,  0,  0}7.000  & 0.400  & \cellcolor[rgb]{ 1,  0,  0}9.000  & 9.000  & 5.9500  & \cellcolor[rgb]{ 1,  0,  0}7.6290  \\
+%         \specialrule{1pt}{0pt}{0pt} % 1pt是线宽
+%     \end{tabular}}
+%     \label{tab:Evaluation of water quality parameters}%
+% \end{table}%
+
+\begin{table}[H]
+    \centering
+    \caption{水质参数评价结果}
+    \begin{tabular}{cc|cccc}
+        \specialrule{1pt}{0pt}{0pt} % 1pt是线宽
+        序号 & 污染物 & 红路水库北 & 红路水库南 & 石场水坑 & 流溪河灌渠 \\
+        \hline
+        1 & pH & 7.70 & 7.97 & 7.90 & 7.5 \\
+        标准 & $6\sim 9$ & 0.350 & 0.485 & 0.450 & 0.250 \\
+        \hline
+        2 & DO & 7.0 & 6.8 & 7.3 & 6.1 \\
+        标准 & $\geqslant 5$ & 0.714 & 0.735 & 0.685 & 0.820 \\
+        \hline
+        3 & BOD$5$ & 2 & 2 & 2 & 3.05 \\
+        标准 & $\leqslant 4$ & 0.500 & 0.500 & 0.500 & 0.763 \\
+        \hline
+        4 & $\mathrm{COD{Mn}}$ & 5.3 & 5.3 & 1.8 & 3.23 \\
+        标准 & $\leqslant 6$ & 0.883 & 0.883 & 0.300 & 0.538 \\
+        \hline
+        5 & 氨氮 & 0.26 & 0.24 & 0.05 & 0.27 \\
+        标准 & $\leqslant 1.0$ & 0.260 & 0.240 & 0.050 & 0.270 \\
+        \hline
+        6 & SS & 54.0 & 48.0 & 28.0 & 37.0 \\
+        标准 & $\leqslant 100$ & 0.540 & 0.480 & 0.280 & 0.370 \\
+        \hline
+        7 & 总磷 & 0.04 & 0.11 & 0.10 & 0.18 \\
+        标准 & $\leqslant 0.05$ & 0.800 & \cellcolor[rgb]{ 1, 0, 0}2.200 & \cellcolor[rgb]{ 1, 0, 0}2.000 & \cellcolor[rgb]{ 1, 0, 0}3.600 \\
+        \hline
+        8 & 总氮 & 1.30 & 1.06 & 1.03 & 1.22 \\
+        标准 & $\leqslant 1.0$ & \cellcolor[rgb]{ 1, 0, 0}1.300 & \cellcolor[rgb]{ 1, 0, 0}1.060 & \cellcolor[rgb]{ 1, 0, 0}1.030 & \cellcolor[rgb]{ 1, 0, 0}1.220 \\
+        \hline
+        9 & 石油类 & 0.20 & 0.21 & 0.02 & 0.02 \\
+        标准 & $\leqslant 0.05$ & \cellcolor[rgb]{ 1, 0, 0}4.000 & \cellcolor[rgb]{ 1, 0, 0}4.200 & 0.400 & 0.400 \\
+        \hline
+        10 & LAS & 0.14 & 0.13 & 0.05 & 0.17 \\
+        标准 & $\leqslant 0.2$ & 0.700 & 0.650 & 0.250 & 0.850 \\
+        \hline
+        11 & 动植物油 & 0.37 & 0.35 & 0.02 & 0.45 \\
+        标准 & $\leqslant 0.05$ & \cellcolor[rgb]{ 1, 0, 0}7.400 & \cellcolor[rgb]{ 1, 0, 0}7.000 & 0.400 & \cellcolor[rgb]{ 1, 0, 0}9.000 \\
+        \hline
+        \multicolumn{2}{c|}{最大值} & 7.400  & 7.000  & 2.000  & 9.000  \\
+        \multicolumn{2}{c|}{平均值} & 1.5861  & 1.6758  & 0.5768  & 1.6437  \\
+        \hline
+        \multicolumn{2}{c|}{P传统} & 5.3514  & 5.0896  & 1.4719  & 6.4692  \\
+        \specialrule{1pt}{0pt}{0pt} % 1pt是线宽
+    \end{tabular}
+    \label{tab:Evaluation of water quality parameters}%
+\end{table}
+
+
+根据表格中的计算数据，可以得到以下信息：
+\begin{enumerate}
+    \item pH值、溶解氧（DO）、五日生化需氧量（BOD$_5$）、高锰酸盐指数（$\mathrm{COD_{Mn}}$）、氨氮、悬浮物（SS）和线性烷基苯磺酸盐（LAS）的浓度均满足标准要求。
+    \item 红路水库南和红路水库北的总磷和总氮超过了标准值，表明水库的富营养化程度较高，需要采取相应的措施进行治理。
+    \item 石场水坑、流溪河灌渠、红路水库北的石油类和动植物油超过了标准值，说明这些地点存在油类污染物的排放，需要加强监管和减少排放。
+    \item 内梅罗水质指数值$P_{\text{传统}}$越大，表示水质状况越差；反之，如果内梅罗水质指数值$P_{\text{传统}}$较小，表示水质状况较好。从计算出的 $P_{\text{传统}}$ 可以看出，除了石场水坑，红路水库北、红路水库南和流溪河灌渠的$P_{\text{传统}}$都比较大，水质污染情况较为严重，需要关注和加强相关处理，减少其主要污染物的排放或产生。
+\end{enumerate}
+
+在水质污染评价中，我们还可以根据内梅罗水质指数污染程度的不同来划分等级标准，以判断水质的污染程度，并进行相应的评价和管理：
+\begin{table}[H]
+    \centering
+    \caption{内梅罗水质指数污染等级划分标准}
+    \begin{tabular}{cccccc}
+    \toprule
+    P     & <1    & $1\sim 2$   & $2\sim 3$   & $3\sim 5$   & >5 \\
+    \midrule
+    水质等级  & 清洁    & 轻污染   & 污染    & 重污染   & 严重污染 \\
+    \bottomrule
+    \end{tabular}
+    \label{tab:Nemero Water Quality Index pollution classification standard}
+\end{table}
+
+根据内梅罗水质指数污染等级划分标准，我们可以进一步将区域污染程度进行可视化的等级评价：
+\begin{table}[H]
+    \centering
+    \caption{区域污染等级评价}
+      \begin{tabular}{ccc}
+      \toprule
+      区域    & $P_{\text{传统}}$   & 水质等级 \\
+      \midrule
+      红路水库北 & 5.3514  & 严重污染 \\
+      红路水库南 & 5.0896  & 严重污染 \\
+      石场水坑  & 1.4719  & 轻污染 \\
+      流溪河灌渠 & 6.4692  & 严重污染 \\
+      \bottomrule
+      \end{tabular}%
+    \label{tab:Regional pollution level evaluation}%
+\end{table}%
+
+
+
+\subsection{小结及建议}
+
+在采取措施改善水质的时候，需要关注水质因子指数较高的监测点，特别是对红路水库南、红路水库北和流溪河灌渠的治理更为紧迫。以下是一些建议和意见：
+\begin{enumerate}
+    \item 总磷和总氮的超标可能与农业、污水排放等因素有关。建议加强农田和养殖场的管理，合理使用化肥和农药，并加强污水处理，以降低排放对水体的影响。
+    \item 石油类和动植物油的超标可能与工业废水排放、油污等因素有关。建议严格控制工业废水的排放，加强油污治理和监管，确保工业和生活污水得到有效处理，避免对水体造成污染。
+    \item 需要建立有效的监测和预警机制，及时发现和应对水质问题。定期对水质进行监测，并进行综合评估和分析，以便及时采取措施进行治理和改善。
+    \item 提高公众的环保意识，加强环境教育，鼓励居民、企业和机构积极参与水质保护和治理工作，共同建设美丽的水环境。
+\end{enumerate}
+
+水质问题是一个复杂的系统工程，需要多方合作和持续努力才能取得明显的改善效果。希望相关部门和社会各界共同努力，保护和改善水环境，为人民群众提供更好的生活条件。
+

@@ -1,0 +1,79 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[中华人民共和国生态环境部(2019{\natexlab{a}})]{HJ25.2-2019}
+中华人民共和国生态环境部.
+\newblock 建设用地土壤污染风险管控和修复监测技术导则: HJ
+  25.2-2019[S].
+\newblock 北京: 中华人民共和国生态环境部, 2019{\natexlab{a}}.
+
+\bibitem[国家环境保护总局(2002)]{GB3838-2002}
+国家环境保护总局.
+\newblock 地表水环境质量标准: GB 3838-2002[S].
+\newblock 北京: 国家环境保护总局, 2002.
+
+\bibitem[中华人民共和国生态环境部(2018{\natexlab{a}})]{HJ2.2-2018}
+中华人民共和国生态环境部.
+\newblock 环境影响评价技术导则——大气环境: HJ 2.2-2018[S].
+\newblock 北京: 中华人民共和国生态环境部, 2018{\natexlab{a}}.
+
+\bibitem[中华人民共和国环境保护部(2017)]{HJ819-2017}
+中华人民共和国环境保护部.
+\newblock 排污单位自行监测技术指南 总则: HJ 819-2017[S].
+\newblock 北京: 中华人民共和国环境保护部, 2017.
+
+\bibitem[中华人民共和国生态环境部(2018{\natexlab{b}})]{HJ964-2018}
+中华人民共和国生态环境部.
+\newblock 环境影响评价技术导则——土壤环境（试行）: HJ
+  964-2018[S].
+\newblock 北京: 中华人民共和国生态环境部, 2018{\natexlab{b}}.
+
+\bibitem[中华人民共和国生态环境部(2019{\natexlab{b}})]{HJ25.1-2019}
+中华人民共和国生态环境部.
+\newblock 建设用地土壤污染状况调查技术导则: HJ 25.1-2019[S].
+\newblock 北京: 中华人民共和国生态环境部, 2019{\natexlab{b}}.
+
+\bibitem[中华人民共和国生态环境部(2018{\natexlab{c}})]{GB36600-2018}
+中华人民共和国生态环境部.
+\newblock
+  土壤环境质量——建设用地土壤污染风险管控标准（试行）:
+  GB 36600-2018[S].
+\newblock 北京: 中华人民共和国生态环境部, 2018{\natexlab{c}}.
+
+\bibitem[中华人民共和国环境保护部(2004)]{HJ/T166-2004}
+中华人民共和国环境保护部.
+\newblock 土壤环境监测技术规范: HJ/T 166-2004[S].
+\newblock 北京: 中华人民共和国环境保护部, 2004.
+
+\bibitem[中华人民共和国环境保护部(2008)]{GB3096-2008}
+中华人民共和国环境保护部.
+\newblock 声环境质量标准: GB 3096-2008[S].
+\newblock 北京: 中华人民共和国环境保护部, 2008.
+
+\bibitem[中华人民共和国生态环境部(2018{\natexlab{d}})]{HJ2.3-2018}
+中华人民共和国生态环境部.
+\newblock 环境影响评价技术导则——地表水环境: HJ 2.3-2018[S].
+\newblock 北京: 中华人民共和国生态环境部, 2018{\natexlab{d}}.
+
+\bibitem[中华人民共和国环境保护部(2012)]{GB3095-2012}
+中华人民共和国环境保护部.
+\newblock 环境空气质量标准: GB 3095-2012[S].
+\newblock 北京: 中华人民共和国环境保护部, 2012.
+
+\bibitem[成都市人民政府(2023)]{成都气候特点}
+成都市人民政府.
+\newblock 成都气候特点[EB/OL].
+\newblock 2023\allowbreak[2023-06-02].
+\newblock \url{http://www.chengdu.gov.cn/chengdu/rscd/qhtj.shtml}.
+
+\end{thebibliography}

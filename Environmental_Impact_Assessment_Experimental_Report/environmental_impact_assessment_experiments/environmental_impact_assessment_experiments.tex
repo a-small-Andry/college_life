@@ -1,0 +1,219 @@
+% !TeX encoding = UTF8
+% !TeX program = xelatex
+\documentclass{cdut_thesis_twoside}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{bm}
+\usepackage{multirow}
+\usepackage{hologo}
+\usepackage[super]{gbt7714}
+\usepackage{pdfpages}
+\usepackage{enumitem}
+\usepackage{mhchem}
+\usepackage{lscape}
+\usepackage{metalogo}
+\usepackage{enumitem}
+\usepackage{colortbl}
+\usepackage{framed}
+\usepackage{rotfloat}
+\usepackage{makecell}
+\usepackage{diagbox} % 绘制表头斜线
+\usepackage{listings}
+    \renewcommand{\lstlistingname}{Code}
+    \lstset{ %%用于列放python代码
+        language=Python,
+        basicstyle=\ttfamily\footnotesize,
+        keywordstyle=\color{orange},
+        stringstyle=\color{green},
+        commentstyle=\color{red},
+        frame=single,
+        numbers=left,
+        numberstyle=\tiny\color{gray},
+        breaklines=true,
+        showstringspaces=false,
+        captionpos=t,
+        escapeinside={(*@}{@*)} % 如果需要在代码中插入LaTeX命令，可以使用 (*@ ... @*) 包裹起来
+    }
+
+\definecolor{blueviolet}{RGB}{138, 43, 226}
+
+
+\begin{document}
+
+%----------------------------------------封面、摘要、目录----------------------------------------%
+\include{data/cover}
+%-------设置起始页脚------%
+\setcounter{page}{1}
+\pagenumbering{Roman}
+%-------设置起始页脚------%
+%--------------------摘要--------------------%
+\null\par
+\begin{chineseabstract}
+    在本实验报告中，我学会了奥维互动地图（OMap）的使用，以及水、大气、土壤和声环境质量现状评价的实验方法和要求。首先，我学会了水环境质量评价中的标准指数法和内梅罗水质指数的应用。接着，我了解了大气环境质量评价中使用的AERSCREEN预测软件和EIAProA2018软件模型，以及制定大气环境监测方案的基本方法。然后，我熟悉了土壤环境质量调查的布点和采样分析方法，并根据最新的技术导则制定了土壤环境监测方案。最后，我掌握了声环境质量评价中使用的EIAN2.0和Surfer绘图软件软件进行影响预测的方法。
+
+    通过这些实验，我掌握了不同环境领域的现状评价方法和工具的应用。我通过实践获得了评估水、大气、土壤和声环境质量的能力，并能够提出相应的改善建议。这些实验培养了我的环境保护意识，提高了解决环境问题的能力。
+
+\par              %
+\null             % 空
+\par              % 两
+\null             % 行
+\par              %
+\noindent \textbf{\heiti 关键词:} 水环境质量评价，大气环境质量评价，土壤环境质量调查，声环境质量评价，现状评价方法    %  （3-5个关键词）
+\end{chineseabstract}
+
+
+\null\par
+\begin{englishabstract}
+    In this experimental report, I learned the use of the Ovi Interactive Map (OMap) and the experimental methods and requirements for the evaluation of the current quality of water, atmosphere, soil and acoustic environment. First of all, I learned the standard index method and the application of Nemerow water quality index in water environment quality evaluation. Then, I learned about the AERSCREEN prediction software and EIAProA2018 software model used in the evaluation of atmospheric environmental quality, as well as the basic methods for developing atmospheric environmental monitoring programs. Then, I got familiar with the distribution and sampling analysis methods of soil environmental quality investigation, and formulated a soil environmental monitoring program according to the latest technical guidelines. Finally, I learned how to predict the impact of EIAN2.0 and Surfer mapping software software used in acoustic environment quality assessment.
+
+    Through these experiments, I have mastered the application of current status assessment methods and tools in different environmental fields. Through practice, I have acquired the ability to evaluate the environmental quality of water, air, soil and sound, and can put forward corresponding suggestions for improvement. These experiments have cultivated my awareness of environmental protection and improved my ability to solve environmental problems.
+
+
+\par              %
+\null             % 空
+\par              % 两
+\null             % 行
+\par              %
+\noindent \textbf{Key words:} water environmental quality assessment, atmospheric environmental quality assessment, soil environmental quality investigation, sound environmental quality assessment, current status assessment methods    %  （3-5个关键词）
+\end{englishabstract}
+%--------------------摘要--------------------%
+\null
+
+{\thispagestyle{fancy}}                           % 设置目录的页眉页脚
+\tableofcontents        %---------------生成目录
+{\thispagestyle{fancy}}                           % 设置目录的页眉页脚
+
+\newpage\null\par
+\listoffigures        %---------------生成插图目录
+{\thispagestyle{fancy}}                           % 设置目录的页眉页脚
+\newpage\null\par
+\listoftables         %---------------生成表格目录
+{\thispagestyle{fancy}}                           % 设置目录的页眉页脚
+
+
+\newpage
+%----------------------------------------封面、摘要、目录----------------------------------------%
+%----------------------------------------------正文----------------------------------------------%
+%-------设置起始页脚------%
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%-------设置起始页脚------%
+\input{data/experiment_one.tex} % 实验一部分 水
+\input{data/experiment_two.tex} % 实验二部分 气
+\input{data/experiment_three.tex} % 实验三部分 土
+\input{data/experiment_four.tex} % 实验四部分 声
+
+
+\newpage\null\par
+\section{奥维互动地图软件介绍}
+\subsection{软件基本概况}
+奥维互动地图软件（OMap）是一款功能强大的地理信息系统（GIS）软件，用于地理数据的可视化、分析和管理。它采用先进的地图技术和空间数据处理算法，为用户提供了高效、准确的地理信息解决方案。
+
+\subsection{主要功能和适用范围}
+OMap作为一款功能强大的地理信息系统软件，具有丰富的功能和广泛的适用范围。无论是环境评价、城市规划、资源管理还是灾害管理，OMap都为用户提供了强大的工具和分析能力，帮助用户更好地理解和利用地理数据，支持决策和规划的制定。
+
+\subsubsection{主要功能}
+奥维互动地图软件（OMap）是一款功能丰富的地理信息系统（GIS）软件，提供了多项强大的功能，助力用户进行地理数据的可视化、分析和管理。
+\begin{enumerate}
+    \item 地图显示与编辑：OMap支持多种地图数据格式的导入和展示，如矢量数据（Shapefile、KML等）和栅格数据（影像、DEM等）。用户可以通过地图窗口进行交互操作，放大缩小、平移地图，以及添加、编辑和删除地图要素。
+    \item 空间分析与查询：OMap提供了丰富的空间分析工具，包括缓冲区分析、叠加分析、网络分析等。用户可以通过这些工具对地理要素之间的空间关系进行量化分析，实现距离测量、面积计算、路径规划等功能。
+    \item 数据编辑与管理：OMap允许用户对地理数据进行编辑和管理操作。用户可以添加、修改和删除地图要素的属性信息，进行要素选择和筛选，以及创建和管理数据表格。
+    \item 地图设计与制图：OMap提供了丰富的地图设计和制图功能，用户可以自定义地图的样式、符号和标注，创建专题地图和统计图表，以及导出高质量的地图制品。
+    \item 数据导入与导出：OMap支持多种数据格式的导入和导出，方便与其他GIS软件进行数据交换和共享。用户可以导入外部地理数据用于分析，同时将分析结果导出为各种格式的数据文件。
+\end{enumerate}
+
+\subsubsection{适用范围}
+OMap在多个领域都有广泛的适用范围，为用户提供了强大的地理信息解决方案。
+\begin{enumerate}
+    \item 环境评价与规划：OMap可用于环境评价与规划工作，通过展示和分析不同环境因素的空间分布，评估环境影响程度和范围。它可以支持环境风险评估、生态保护规划、环境监测等工作。
+    \item 城市规划与交通管理：OMap可用于城市规划和交通管理领域，通过空间分析工具优化土地利用规划、交通网络设计等，实现城市规划的效果评估和交通流量预测。
+    \item 自然资源管理：OMap可用于自然资源管理和保护，帮助用户分析和优化资源利用方案，进行森林管理、土地资源评估、水资源调查等工作。
+    \item 应急响应与灾害管理：OMap在应急响应和灾害管理中发挥重要作用。它可以提供空间数据的实时监测和分析，支持灾害风险评估、救援路径规划、灾后重建等工作。
+    \item 商业决策与市场分析：OMap可用于商业决策和市场分析，通过地理数据的可视化和空间分析，帮助用户了解市场潜力、优化营销策略、确定最佳业务位置等。
+\end{enumerate}
+
+
+\subsection{具体环评案例中的应用}
+在环境评价案例中，奥维互动地图软件可以发挥重要作用。首先，软件可以将不同环境因素（如污染源、水体、植被等）的空间分布信息进行可视化，帮助评价人员全面了解环境现状。其次，通过软件的空间分析功能，可以对环境影响范围、敏感区域等进行定量分析和评估。此外，软件还支持数据的动态更新和模拟，可以进行环境影响的预测和模拟分析，为环境评价提供科学依据。
+
+
+\subsubsection{大气环境环评应用}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/Monitoring range and distribution map.png}
+    \caption*{图 \ref{fig:Monitoring range and distribution map}: 监测范围及布点}
+\end{figure}
+
+这里使用的是世纪空间卫星影像图。为了划定监测范围并标识可能的监测点，我使用了CAD工具绘制了圆圈，并在图上使用了图钉标签进行标识。这样的操作能够更清晰地呈现监测范围和监测点的位置。
+
+
+
+\subsubsection{土壤环境环评应用}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/Soil monitoring dot map.png}
+    \caption*{图 \ref{fig:Soil monitoring dot map}: 土壤监测布点图}
+\end{figure}
+
+这里使用的地图影像为天地图影像，相对于世纪空间卫星影像图，它的更新时间稍慢一些。此外，天地图影像的图像风格和清晰度也存在一些差异。不过，根据个人的评价需求来看，这些差异并不构成大问题。
+
+
+
+\subsubsection{声环境环评应用}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/Acoustic environment monitoring dot map.png}
+    \caption*{图 \ref{fig:Acoustic environment monitoring dot map}: 声环境监测布点图}
+\end{figure}
+
+这是通过3D地图旋转得到的区域，然后截图导出，再用Inkscape绘制出网格，最后在合适的点位标注出设置的监测点。
+
+
+\subsection{小结与建议}
+\subsubsection{软件使用小结}
+在完成对OMap软件的学习和使用后，我对该软件的功能和性能有了更深入的了解。OMap作为一款功能强大的地理信息系统软件，在地理数据的可视化、分析和管理方面提供了许多有用的工具和功能。
+通过使用OMap，我学会了如何导入和展示不同格式的地图数据，进行空间分析和查询，编辑和管理地理要素的属性信息，以及设计和制图等操作。软件的操作界面直观友好，功能模块丰富，使得我能够灵活处理地理数据，进行深入的空间分析和可视化呈现。
+在实践中，OMap为我提供了强大的工具和分析能力，帮助我更好地理解和利用地理数据，支持决策和规划的制定。
+
+
+\subsubsection{软件使用建议}
+
+尽管OMap是一款功能强大的软件，但在使用过程中也有一些需要注意和改进的地方。以下是我对OMap软件的使用建议：
+\begin{enumerate}
+    \item 提供更多的学习资源：对于初次接触OMap的用户来说，提供更多的学习资源，如教程、示例数据和案例分析，可以帮助用户更快地掌握软件的功能和应用方法。
+    \item 增强数据导入和导出的灵活性：尽可能支持更多的数据格式和数据源的导入和导出，以满足用户对数据的灵活处理和共享需求。
+    \item 进一步简化操作流程：在某些复杂操作中，进一步简化操作流程，减少用户的操作步骤，提高软件的易用性和效率。
+    \item 加强稳定性和性能优化：持续改进软件的稳定性和性能，减少崩溃和卡顿现象，提高软件的响应速度和运行效率。
+    \item 提供定制化功能和插件支持：为用户提供定制化功能和插件支持的机制，使得用户能够根据自己的需求扩展软件的功能和定制化工作流程。
+\end{enumerate}
+
+通过以上的建议，OMap软件在功能和用户体验方面能够不断完善和优化，为用户提供更好的地理信息解决方案。我相信OMap在未来会有更大的发展潜力，帮助更多的用户进行地理数据的可视化、分析和管理工作。
+
+
+
+
+%----------------------------------------------正文----------------------------------------------%
+%--------------------------------------结论、致谢、参考文献---------------------------------------%
+\include{data/mythanks}
+\newpage
+\null\par
+\bibliographystyle{unsrt}
+\bibliography{reference}
+%--------------------------------------结论、致谢、参考文献---------------------------------------%
+
+
+% \begin{landscape}
+% \begin{figure}[p]
+%     \centering
+%     \includegraphics[width=24cm]{figures/Monitoring deployment map.png}
+%     \caption*{较为高清的监测范围及布点图}
+%     \label{fig:Monitoring deployment map}
+% \end{figure}
+% \end{landscape}
+
+
+\end{document}
