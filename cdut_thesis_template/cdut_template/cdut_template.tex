@@ -1,0 +1,103 @@
+% !TeX encoding = UTF8
+% !TeX program = xelatex
+\documentclass[oneside]{cdut_thesis} %-- 格式可选参数有oneside（默认）和twoside
+
+% 封面个人信息的修改
+% 在 cdut_thesis.cls 中修改 \cdut（该报告的类型） 参数
+\newcommand\yourtitle{成都理工大学环境科学与工程专业\LaTeX 报告模板}
+\newcommand\yourname{安德利}
+\newcommand\yourstudentnumber{202019020220}
+\newcommand\yourteacher{XXX}
+\newcommand\yourmajor{环境科学与工程}
+\newcommand\yourcollege{成都理工大学生态环境学院环境科学与工程系}
+\newcommand\yourfinishdate{2023年6月}
+
+% 设置pdf的属性参数，书签已自动生成（见.cls）
+\hypersetup{
+	pdfauthor={\yourname},
+	pdftitle={\yourtitle},
+	% colorlinks=true, % 控制超链接的颜色，默认false为黑色
+		% linkcolor=blue,
+		% citecolor=green,
+		% urlcolor=red
+}
+
+% \usepackage{style/Genshinbox}       % 自定义宏包 - 原神任务框 \Genshinsection{<标题名称>}
+% \usepackage{style/pythonlistings}   % 自定义宏包 - 显示python代码 \begin{lstlisting}[caption={my file.py}, label={lst:python_code_my_file}] \end{lstlisting}
+
+% \usepackage{pythontex} % 内部运行 python 代码，不会用就不用管
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 导言区配置 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----- 封面 -----%
+\include{data/cover}   %-- 导入封面
+
+%----- 摘要 -----%
+\setcounter{page}{1}   %-- 设置起始页脚
+\pagenumbering{Roman}  %-- 设置页码为大写罗马数字
+
+\input{data/abstract_chinese.tex}  %-- 中文摘要
+% \input{data/abstract_english.tex}  %-- 英文摘要
+
+%----- 目录 -----%
+{\thispagestyle{fancy}}  %-- 设置目录的页眉页脚
+\null \tableofcontents         %--生成目录
+{\thispagestyle{fancy}}  %-- 设置目录的页眉页脚
+
+% \newpage\null\par \listoffigures {\thispagestyle{fancy}}  %-- 插图目录（可选）
+% \newpage\null\par \listoftables {\thispagestyle{fancy}}   %-- 表格目录（可选）
+
+\newpage
+%----------------------------------------------正文----------------------------------------------%
+\setcounter{page}{1}    %-- 设置起始页脚
+\pagenumbering{arabic}  %-- 设置页码为阿拉伯数字
+%-- 以上部分属于正文设置 --%
+
+\null\par
+\section{一级标题}
+\subsection{二级标题}
+\subsubsection{三级标题}
+\paragraph{段落标题}~{}\par
+\paragraph{普通段落标题}段落后面的文字
+
+
+正文部分……
+
+
+\subsection{尝试参考文献的引用}
+phdthesis（博士学位论文）\cite{phdthesis_example}
+
+article（期刊文章）\cite{article_example}
+
+online（在线资源）\cite{online_example}
+
+standard（标准文件）\cite{standard_example}
+
+book（书籍）\cite{book_example}
+
+inproceedings（会议论文）\cite{inproceedings_example}
+
+report（报告）\cite{report_example}
+
+thesis（学位论文）\cite{thesis_example}
+
+misc（其他类型）\cite{misc_example}
+
+如果为 [?] ，不用担心，是正常的，只需要通过 BibTeX  编译即可。
+
+
+
+%----------------------------------------------正文----------------------------------------------%
+%--------------------------------------结论、致谢、参考文献---------------------------------------%
+\include{data/conclusion.tex} % 结论
+
+% 参考文献
+\null\par
+\bibliographystyle{unsrt}
+\bibliography{reference}
+
+\include{data/mythanks.tex} % 致谢
+%--------------------------------------结论、致谢、参考文献---------------------------------------%
+
+\end{document}

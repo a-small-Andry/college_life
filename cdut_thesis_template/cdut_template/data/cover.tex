@@ -1,0 +1,62 @@
+\thispagestyle{empty}
+\begin{center}
+    \makebox[109mm][c]{\heiti\zihao{-2} \cdut}              % \cdut 在类文件中定义为“成都理工大学普通本科实习报告”
+\vskip2cm
+    \makebox[109mm][c]{\heiti\zihao{2} \yourtitle}                     %报告的名称
+\end{center}
+\vskip2cm
+\begin{center}
+    \includegraphics[width=50mm,height=50mm]{school_badge/CDUT.png}                    %成都理工大学的校徽
+\end{center}
+\vskip2.5cm
+%-------------------------------------------------个人信息---------------------------------------------------%
+\begin{center}
+    \makebox[30mm][l]{\heiti\zihao{3} 学 \hspace{0.8cm} 生：} \makebox[50mm][l]{\heiti\zihao{3} \yourname }
+    %姓名
+    \vskip0.5cm
+    \makebox[30mm][l]{\heiti\zihao{3} 学 \hspace{0.8cm} 号：} \makebox[50mm][l]{\heiti\zihao{3} \yourstudentnumber }
+    %学号
+    \vskip0.5cm
+    \makebox[30mm][l]{\heiti\zihao{3} 指导教师：} \makebox[50mm][l]{\heiti\zihao{3} \yourteacher }
+    %指导教师
+    \vskip0.5cm
+    \makebox[30mm][l]{\heiti\zihao{3} 专 \hspace{0.8cm} 业：} \makebox[50mm][l]{\heiti\zihao{3} \yourmajor }
+    %专业
+\end{center}
+%-------------------------------------------------个人信息---------------------------------------------------%
+\vskip2.5cm
+\begin{center}
+    \makebox[109mm][c]{\heiti\zihao{-2} \yourcollege }    
+\end{center}
+\vskip1cm
+\vfill\begin{center}
+    {\heiti\zihao{3} \yourfinishdate }                                                   %撰写时间
+\end{center}
+\newpage
+%-----------------------------空白页-----------------------------%
+\makeatletter % 激活 @ 符号
+\ifcdut@twoside % 文档为双面样式，则添加空白页
+	\thispagestyle{empty}
+	\null
+	\newpage
+\fi
+\makeatother % 取消激活 @ 符号
+
+%%%---------------------------------------（个人信息）要用时才做修改----------------------------------------%%%
+%-----------------------------------------------------------------------------------------------------------%
+%------------------------------------------------下划线格式--------------------------------------------------%
+%\begin{center}
+%    \makebox[30mm][l]{\heiti\zihao{3} 学 \hspace{0.8cm} 生：} \underline{\makebox[60mm][l]{\heiti\zihao{3} 安德利}}
+%    %姓名
+%    \vskip0.5cm
+%    \makebox[30mm][l]{\heiti\zihao{3} 学 \hspace{0.8cm} 号：} \underline{\makebox[60mm][l]{\heiti\zihao{3} %202019020220}}
+%    %学号
+%    \vskip0.5cm
+%    \makebox[30mm][l]{\heiti\zihao{3} 指导教师：} \underline{\makebox[60mm][l]{\heiti\zihao{3} 杜海英，吴灿，何鹏，徐婷婷}}
+%    %指导教师
+%    \vskip0.5cm
+%    \makebox[30mm][l]{\heiti\zihao{3} 专 \hspace{0.8cm} 业：} \underline{\makebox[60mm][l]{\heiti\zihao{3} 环境科学与工程}}
+%    %专业
+%\end{center}
+%------------------------------------------------下划线格式--------------------------------------------------%
+%-----------------------------------------------------------------------------------------------------------%

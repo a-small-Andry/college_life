@@ -1,0 +1,25 @@
+% mylistings.sty
+% LaTeX style file for customizing python code listings
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pythonlistings}[2023/06/23 Custom listings style]
+
+\RequirePackage{listings}
+\renewcommand{\lstlistingname}{Code}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{orange},
+    stringstyle=\color{green},
+    commentstyle=\color{red},
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+    captionpos=t,
+    escapeinside={(*@}{@*)} % 如果需要在代码中插入LaTeX命令，可以使用 (*@ ... @*) 包裹起来
+}
+%%使用说明：\begin{lstlisting}[caption={my file.py}, label={lst:python_code_my_file}] \end{lstlisting}
+
+\endinput
