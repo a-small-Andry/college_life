@@ -1,0 +1,70 @@
+\contentsline {section}{第 \uppercase {i}部分\hspace {1em}设计说明书}{1}{Genshinsectioncounter.1}%
+\contentsline {section}{\numberline {第1章}设计背景}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}设计任务背景}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}出水排放标准规范}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}设计目的及任务}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {第2章}设计总说明}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}工程概况}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}城市概况}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}污水处理厂概况及设计规模}{4}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}工艺运行状况}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}工艺流程}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}进出水质}{6}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}设计依据}{7}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}法律法规}{7}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}参考规范及标准}{7}{subsubsection.2.3.2}%
+\contentsline {section}{第 \uppercase {ii}部分\hspace {1em}计算说明书}{8}{Genshinsectioncounter.2}%
+\contentsline {section}{\numberline {第3章}处理构筑物设计及选型}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}格栅}{8}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}基础数据}{8}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}粗格栅计算草图}{9}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}粗格栅的计算}{10}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}细格栅设计数据}{14}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}细格栅的计算}{15}{subsubsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.2}沉砂池}{17}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}沉砂池的选择}{17}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}曝气沉砂池的计算}{17}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}改良卡鲁塞尔氧化沟}{21}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}设计基本参数}{21}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}好/缺/厌氧区计算}{23}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}二沉池}{28}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}二沉池的选择}{28}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}计算数据与条件}{29}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}主体设计计算}{31}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}中心进水导流筒及稳流筒}{33}{subsubsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.5}污泥浓缩脱水}{34}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}基础数据}{35}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}加压溶气气浮工艺指标计算}{35}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}气浮池接触室}{37}{subsubsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.4}气浮分离室}{38}{subsubsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.5}溶气设备}{40}{subsubsection.3.5.5}%
+\contentsline {subsubsection}{\numberline {3.5.6}污泥脱水}{41}{subsubsection.3.5.6}%
+\contentsline {paragraph}{$\bullet $ 基础条件}{41}{paragraph*.25}%
+\contentsline {paragraph}{$\bullet $ 设计计算}{42}{paragraph*.26}%
+\contentsline {subsection}{\numberline {3.6}消毒池}{44}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}消毒方式的选择}{44}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}臭氧消毒接触池设计}{45}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}臭氧发生器所需空气量}{46}{subsubsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.7}提升泵房}{46}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}水泵总扬程估算}{47}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}提升泵的选型}{49}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}水泵最大安装高度}{51}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}集水池的计算}{53}{subsubsection.3.7.4}%
+\contentsline {section}{\numberline {第4章}厂区总图设计}{54}{section.4}%
+\contentsline {subsection}{\numberline {4.1}厂区管道}{54}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}厂区管道分类}{54}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}进水管渠的计算}{55}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}氧化沟管道的设计}{57}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}高程图布置}{60}{subsection.4.2}%
+\contentsline {section}{总结}{62}{section*.40}%
+\contentsline {section}{参考文献}{63}{section*.40}%
+\contentsline {section}{致谢}{64}{section*.42}%
+\contentsline {section}{第 \uppercase {iii}部分\hspace {1em}设计图集}{65}{Genshinsectioncounter.3}%
+\contentsline {subsection}{缩略图【格栅及曝气沉砂池平剖面图】}{66}{subsection*.45}%
+\contentsline {subsection}{缩略图【改良卡鲁塞尔氧化沟平剖面】}{67}{subsection*.47}%
+\contentsline {subsection}{缩略图【二沉池平剖面图】}{68}{subsection*.49}%
+\contentsline {subsection}{缩略图【加压溶气气浮池】}{69}{subsection*.51}%
+\contentsline {subsection}{缩略图【臭氧消毒池平剖面图】}{70}{subsection*.53}%
+\contentsline {subsection}{缩略图【提升泵房平剖面图】}{71}{subsection*.55}%
+\contentsline {subsection}{缩略图【污水处理厂平面布置图】}{72}{subsection*.57}%
+\contentsline {subsection}{缩略图【污水处理厂高程布置图】}{73}{subsection*.59}%

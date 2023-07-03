@@ -1,0 +1,121 @@
+% myletter.sty
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{myletter}
+
+\RequirePackage{ctex}
+\RequirePackage{hyperref}
+\RequirePackage{geometry}
+\RequirePackage{fancyhdr}
+\RequirePackage{graphicx}
+\RequirePackage{amsmath}
+\RequirePackage[super]{gbt7714}
+\RequirePackage{amssymb}
+\RequirePackage{numerica}
+\RequirePackage{tikz}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{float}
+\RequirePackage{listings}
+\RequirePackage{booktabs}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{color}
+\RequirePackage{xcolor}
+\RequirePackage{fancybox}
+\RequirePackage{framed}
+\RequirePackage{multirow}
+\RequirePackage[perpage]{footmisc} % 每页脚注都重新计数
+\RequirePackage{pifont}
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage{makecell}
+\RequirePackage{longtable}
+% \RequirePackage{animate} % 加载动图
+
+\hypersetup{pdfborder={0}{0}{1},pdftitle={环境工程课程设计},pdfauthor={安德利},bookmarksnumbered=true,colorlinks=true} % linkcolor=black,citecolor=black
+
+\geometry{left=2cm,right=2cm,top=1cm,bottom=3cm}
+\headheight=5cm
+\textheight=0.83\textheight
+
+% 页眉页脚的修改
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\raisebox{10pt}{\includegraphics[height=3cm]{school_badge/CDUT_black.png}}}
+\fancyfoot[R]{\zihao{4}第 \thepage 页}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{2pt}
+
+% 创建部分、修改标题
+\newcounter{mysectioncounter}
+\setcounter{mysectioncounter}{0}
+
+\newcommand{\mysection}[1]{%
+	\refstepcounter{mysectioncounter}%
+	\addcontentsline{toc}{section}{第 \uppercase\expandafter{\romannumeral\themysectioncounter}部分\hspace{1em}#1}%
+ 	\section*{第 \uppercase\expandafter{\romannumeral\themysectioncounter}部分\hspace{1em}#1}%
+}
+
+\ctexset{section={name={第, 章}, number=\arabic{section}}}
+
+\numberwithin{table}{section}
+\renewcommand{\thetable}{\arabic{section}-\arabic{table}}
+\numberwithin{figure}{section}
+\renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\arabic{section}-\arabic{equation}}
+
+% 修改脚注
+\renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{mlred}{RGB}{253,243,242}
+\definecolor{mred}{RGB}{220,53,69}
+\definecolor{bg}{rgb}{0.99,0.99,0.99}
+\definecolor{mlblue}{RGB}{236,243,255}
+\definecolor{mblue}{RGB}{0,123,255}
+\definecolor{lsp}{RGB}{0,174,247}
+\definecolor{mlblue3}{RGB}{44, 49, 51} % mycmd颜色
+\definecolor{mlblue2}{RGB}{35, 41, 55}
+
+\lstdefinestyle{python2}{
+    language =   Python, % 语言选Python
+    frame=true,
+    basicstyle={\small\ttfamily\bfseries\color{black}},
+    mathescape,
+    emphstyle={\small\ttfamily\bfseries\color{black}},
+    numbers=none,
+    stepnumber=2,
+    numbersep=3em,
+    numberstyle= \small\ttfamily\bfseries\tiny,
+    keywordstyle    =  \small\ttfamily\bfseries\color{orange},
+    stringstyle     =  \small\ttfamily\bfseries\color{black},
+    breaklines      =   true,   % 自动换行，
+    columns         =   fixed,  %字间距就不固定很丑，必须加
+    basewidth       =   .5em,
+    commentstyle=\small\ttfamily\bfseries\color{cyan!30},
+    backgroundcolor=\color{white},
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false,
+    morekeywords={Out,In,maketitle,pip,matplotlib,pandas,numpy,np,dtype},
+}
+
+\newenvironment{boxjisuan}
+{\begin{tcolorbox}
+[enhanced jigsaw,breakable,pad at break*=1mm,
+ colback=black!0!white,boxrule=0pt,frame hidden,
+ borderline west={1.5mm}{0.5mm}{black!30!white}]}
+{\end{tcolorbox}}
+\newenvironment{calculating}{\begin{boxjisuan}\fangsong}{\end{boxjisuan}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 定义总结、致谢环境
+\newenvironment{myconclusion}
+	{\newpage\section*{总结}\addcontentsline{toc}{section}{总结}\par}
+	{\par\noindent\ignorespacesafterend}
+\newenvironment{mythanks}
+	{\newpage\section*{致谢}\addcontentsline{toc}{section}{致谢}\par}
+	{\par\noindent\ignorespacesafterend}
+
+\endinput
