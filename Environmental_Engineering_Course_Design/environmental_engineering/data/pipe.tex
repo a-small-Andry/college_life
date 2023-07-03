@@ -1,0 +1,241 @@
+\subsection{厂区管道}
+\subsubsection{厂区管道分类}
+厂区主要管道有污水管，污泥管，空气管，厂区给水管，厂区排水管，厂区自用水
+管，雨水管等。
+\begin{enumerate}
+	\item 污水管：\\
+	污水管是污水处理厂中最主要的管线，它将各处理单元连接起来，起到承上启下的作用。
+	\item 污泥管：\\
+	污泥管输送污泥，也是主要管线，其输送成分主要由氧化沟产生的剩余污泥和后续系统分离出的污泥组成，该管线设计考虑污泥含水率低，尽量提高污泥流速，避免淤积，尽量少转弯，力求平直。
+	\item 空气管：\\
+	空气管道主要为需要曝气的单元输送空气，连接至鼓风机房并分别通入曝气沉砂池和卡鲁塞尔氧化沟好氧区。
+	\item 工厂排水管：\\
+	厂区还设有排水管将厂区废水回流至处理前端，使其进入系统。在厂区自用水管厂内设置厂区自用水管，管线布置主要考虑各生产构筑物冲洗水、绿化用水、生产加药稀释水等。为了防止污染，应设于污水污泥管之上，故设置浅层。
+	\item 雨水管：\\
+	厂内雨水经地面径流收集进入厂区雨水管，再经雨水泵提升排出厂外。主要沿厂区道路铺设管线。
+\end{enumerate}
+
+
+\subsubsection{进水管渠的计算}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[pattern=north east lines, pattern color=black!50] (0,0) circle (2.5cm); % 绘制圆
+		\draw[black, fill=white] (0,0) circle (2cm); % 绘制圆
+		
+		\foreach \mytheta in {17.5} {
+			\draw[pattern=dots, pattern color=black!20] (\mytheta:2cm) -- (180-\mytheta:2cm) arc (-\mytheta-180:\mytheta:2cm);
+
+			\foreach \r in {3} {
+				\draw (-\r,0) -- (\r,0);
+				\draw (0,-\r) -- (0,\r);
+			}
+			\draw (\mytheta:0.3cm) arc (\mytheta:90:0.3cm); % 绘制扇形
+			\node[above] at (\mytheta:0.3cm) {$\theta $};
+		
+			\draw (\mytheta:2cm) -- (0,0) -- (180-\mytheta:2cm) -- (4,{sin(\mytheta)*2});
+			\draw (-90:2cm) -- (4.7,-2);
+			\draw[stealth-stealth] (3.8,{sin(\mytheta)*2}) -- (3.8,-2);
+			\node[right] at (3.8,{sin(\mytheta)-1}) {$h$};
+		
+			\draw (0,2) -- (4.7,2);
+			\draw[stealth-stealth] (4.5,2) -- (4.5,-2);
+			\node[right] at (4.5,0) {$D$};
+		}
+	\end{tikzpicture}
+	\caption{进水管径计算草图}
+	\label{fig:Inlet pipe diameter calculation sketch}
+\end{figure}
+
+进水管渠的流量应按下式计算\cite[p.20]{GB500142021}：
+$$Q=Av$$
+由上图 \ref{fig:Inlet pipe diameter calculation sketch} 所示，因为充满度 $\lambda =\dfrac{h}{D}$，设半径为 $r$，则 $D=2r$，$h=2\lambda r$，得
+\begin{align*}
+	S_{\text{三角形}} &=(2\lambda -1)r\sqrt{r^2 - (2\lambda -1)^2r^2} \\
+	\theta &= \arccos{\dfrac{(2\lambda -1)r}{r}} = \arccos{(2\lambda -1)} \\
+	S_{\text{扇形}} &=\dfrac{2\pi-2\theta}{2\pi}\pi r^2 = \left[\pi-\arccos{(2\lambda -1)}\right]r^2
+\end{align*}
+所以，总水流有效断面面积为
+\begin{align}
+	A &= S_{\text{三角形}} + S_{\text{扇形}} \notag \\
+	&=\left[(2\lambda -1)\sqrt{1 - (2\lambda -1)^2} +\pi-\arccos{(2\lambda -1)}\right]  r^2
+\end{align}
+为满足后续格栅处理工艺要求，取定流速为 $v=0.85$ m/s\footnote{《室外排水设计标准》（GB 50014-2021）：污水过栅流速宜采用 0.6 m/s $\sim$ 1.0 m/s。}，假设充满度 $\lambda =0.65$，并将公式$Q=Av$和流量 $Q_{max}=58100$ m$^3$/d，带入可求得管道半径为
+\begin{align}
+	r &= \sqrt{\dfrac{1}{(2\lambda -1)\sqrt{1 - (2\lambda -1)^2} +\pi-\arccos{(2\lambda -1)}}\cdot\dfrac{Q_{max}}{v}} \\
+	&= \sqrt{\dfrac{1}{(2\times 0.65 -1)\sqrt{1 - (2\times 0.65 -1)^2} +\pi-\arccos{(2\times 0.65 -1)}}\times\dfrac{58100}{86400}\times\dfrac{1}{0.85}} \;\text{m} \notag \\
+	&= \eval{\sqrt{\dfrac{1}{(2\times 0.65 -1)\sqrt{1 - (2\times 0.65 -1)^2} +\pi-\arccos{(2\times 0.65 -1)}}\times\dfrac{58100}{86400}\times\dfrac{1}{0.85}}}[5] \;\text{m} \notag
+\end{align}
+所以，求得管径为
+\begin{align*}
+	D=2r &=2\times 0.60496 \;\text{m}=\eval{2\times 0.60496 * 1000} \;\text{mm} \\
+	&\approx  1200\;\text{mm（管径取整）}
+\end{align*}
+
+
+当管径取$D=1200$ mm时，可以反算出进水管道内的实际充满度：
+% \begin{align} % 实际流速
+% 	v=\dfrac{Q}{A}&=\dfrac{Q_{max}}{\left[(2\lambda -1)\sqrt{1 - (2\lambda -1)^2} +\pi-\arccos{(2\lambda -1)}\right]\dfrac{D^2}{4}} \\
+% 	&=\dfrac{58100}{86400}\times\dfrac{1}{\left[(2\times 0.65 -1)\sqrt{1 - (2\times 0.65 -1)^2} +\pi-\arccos{(2\times 0.65 -1)}\right]\times\dfrac{1.2^2}{4}} \;\text{m/s} \notag \\
+% 	&=\eval{\dfrac{\dfrac{58100}{86400}}{\left[(2\times 0.65 -1)\sqrt{1 - (2\times 0.65 -1)^2} +\pi-\arccos{(2\times 0.65 -1)}\right]\times\dfrac{1.2^2}{4}}}[3] \;\text{m/s} \notag
+% \end{align}
+\begin{align}
+	A=\left[(2\lambda -1)\sqrt{1 - (2\lambda -1)^2} +\pi-\arccos{(2\lambda -1)}\right]  r^2 = \dfrac{Q_{max}}{v}
+\end{align}
+考虑到等式较为复杂，求解实际充满度 $\lambda$ 会比较麻烦，而且最大流量$Q_{max}$和$v$都是确定的值，那么总水流有效断面面积$A$为定值。
+% 再根据上式可知，充满度$\lambda$会管道半径$r$成反比。因为实际管径比理论管径要小（$D_{\text{实际}}<D_{\text{理论}}$），所以实际充满度会比理论充满度大（$\lambda_{\text{实际}}>\lambda_{\text{理论}}$），则
+因为实际充满度的范围一定会在0与1之间（$\lambda\in [0,1]$），则利用Python使用二分法求解，代码如下：
+\begin{lstlisting}[style=python2]
+	import math
+
+	Qmax = 58100/86400 # 最大流量，单位 m3/s
+	v = 0.85 # 流速，单位 m/s
+	r = 1.2/2 # 管道半径，单位 m
+
+	lambda_min = 0 # 最小充满度
+	lambda_max = 1 # 最大充满度
+	A = 0  # 初始化A的值
+	while abs(A-Qmax/v) >= 0.1**20: # 利用二分法求解实际充满度lambda
+		lambda0 = (lambda_min + lambda_max) / 2
+		A = ((2 * lambda0 - 1) * (1 - (2 * lambda0 - 1) ** 2) ** 0.5 + math.pi - math.acos(2 * lambda0 - 1)) * r ** 2
+
+		if A > Qmax / v:
+			lambda_max = lambda0
+		else:
+			lambda_min = lambda0
+
+	print("实际充满度：lambda =", lambda0)
+\end{lstlisting}
+\begin{calculating}
+	$\text{实际充满度：lambda} = 0.6594358677650606$
+\end{calculating}
+所以，得到实际充满度为$\lambda = \eval{0.6594358677650606}[2]$。
+
+查阅《室外排水设计标准》（GB 50014-2021），重力流污水管道应按非满流计算，其最大设计充满度应按下表 \ref{tab:Maximum design fullness of drainage channels} 的规定取值。
+\begin{table}[H]
+	\centering
+	\caption{排水管渠的最大设计充满度\cite[p.20]{GB500142021}}
+	\begin{tabular}{cc}
+		\toprule
+		管径或渠高(mm) & 最大设计充满度 \\
+		\midrule
+		$200\sim300$ & 0.55 \\
+		$350\sim450$ & 0.65 \\
+		$500\sim900$ & 0.70 \\
+		$\geqslant 1000$  & 0.75 \\
+		\bottomrule
+	\end{tabular}%
+	\label{tab:Maximum design fullness of drainage channels}%
+\end{table}%
+
+所以，管径$D = 1200 \geqslant 1000$ mm 时，充满度$\lambda = \eval{0.6594358677650606}[2]<0.75$，满足要求。
+
+
+\subsubsection{氧化沟管道的设计}
+\begin{enumerate}
+	\item 进水管、回流污泥管及进水井
+	
+	进水与回流污泥进入进水井，经混合后经进水潜孔进入厌氧池。
+	\begin{enumerate}
+		\item 进水管
+		
+		单组氧化沟进水管设计流量
+		\begin{equation}
+			Q_1=\dfrac{Q}{2}K_z=\dfrac{35000}{2\times 86400}\times 1.66 \;\text{m$^3$/s} =\eval{\dfrac{35000}{2\times 86400}\times 1.66}[3] \;\text{m$^3$/s}
+		\end{equation}
+		假定管道流速 $v=1.0$ m/s，则管径
+		\begin{align}
+			D=\sqrt{\dfrac{4Q_1}{\pi v}} &=\sqrt{\dfrac{4\times 0.336}{\pi \cdot 1.0}} \;\text{m} =\eval{\sqrt{\dfrac{4\times 0.336}{\pi \cdot 1}}} \;\text{m} \\
+			&= 700 \;\text{mm （向上取整）} \notag
+		\end{align}
+		取进水管 DN700 mm，对管道流速进行校核：
+		\begin{align*}
+			v=\dfrac{Q}{A}=\dfrac{4Q_1}{\pi D^2}=\dfrac{4\times0.336}{\pi\cdot 0.7^2} \;\text{m/s} =\eval{\dfrac{4\times0.336}{\pi\cdot 0.7^2}}[3] \;\text{m/s（符合要求）} 
+		\end{align*}
+		% （根据中华人民共和国住房和城乡建设部《室外排水设计标准》（GB 50014-2021）\cite{GB500142021}：排水管道采用压力流时，压力管道的设计流速宜采用 0.7 m/s $\sim$ 2.0 m/s。则符合要求）
+
+		\item 回流污泥管
+		
+		取污泥回流比$R=100\%$\footnote{《室外排水设计标准》（GB 50014-2021）：延时曝气氧化沟的主要设计参数中，污泥回流比$R=75\%\sim 150\%$。}，则单组氧化沟回流污泥管设计流量为
+		\begin{equation}
+			Q_R=RQ_{\text{单}}=100\%\times\dfrac{35000}{2\times 86400} \;\text{m$^3$/s} =\eval{1\times\dfrac{35000}{2 \times 86400}}[3] \;\text{m$^3$/s}
+		\end{equation}
+		假定管道流速 $v=1.0$ m/s，则管径
+		\begin{align}
+			D=\sqrt{\dfrac{4Q_R}{\pi v}} &=\sqrt{\dfrac{4\times 0.203}{\pi \cdot 1.0}} \;\text{m} =\eval{\sqrt{\dfrac{4\times 0.203}{\pi \cdot 1}}} \;\text{m} \\
+			&= 600 \;\text{mm （向上取整）} \notag
+		\end{align}
+		则取回流污泥管 DN600 mm。
+
+		\item 进水井（进水潜孔设于厌氧池首端）
+
+		进水孔过流量
+		\begin{equation}
+			Q_2=Q_1+Q_R=0.336+0.203 \;\text{m$^3$/s} =0.539 \;\text{m$^3$/s} 
+		\end{equation}
+		取孔口流速 $v=0.6$ m/s，则孔口过水断面积为
+		\begin{equation}
+			A=\dfrac{Q_2}{v}=\dfrac{0.539}{0.6} \;\text{m$^2$} = \eval{\dfrac{0.539}{0.6}}[3] \;\text{m$^2$}
+		\end{equation}
+		则孔口尺寸（长 $\times$ 宽）取 $b\times h=1.2\text{m}\times 0.8\text{m}$，并校核流速：
+		\begin{align*}
+			v=\dfrac{Q_2}{b\cdot h} =\dfrac{0.539}{1.2\times 0.8} \;\text{m/s} = \eval{\dfrac{0.539}{1.2\times 0.8}}[2] \;\text{m/s（符合要求）}
+		\end{align*}
+		进水井平面尺寸为 $1.6\text{m}\times 1.6\text{m}$。
+	\end{enumerate}
+
+	\item 出水堰及出水竖井、出水管
+	
+	氧化沟出水处设置出水竖井，竖井内安装电动可调节堰。初步估算 $\delta /H<0.67$，因此按薄壁堰来计算。
+	\begin{equation}
+		Q_3=0.86bH^{\frac{3}{2}}
+	\end{equation}
+	又因为
+	\begin{equation}
+		Q_3=Q_1+Q_R=0.336+0.203 \;\text{m$^3$/s} =0.539 \;\text{m$^3$/s} 
+	\end{equation}
+	$H$ 取 0.2 m，则
+	\begin{align}
+		b=\dfrac{Q_3}{1.86\times H^{3/2}} &= \dfrac{0.539}{1.86\times 0.2^{3/2}} \;\text{m} =\eval{\dfrac{0.539}{1.86\times 0.2^{\frac{3}{2}}}} \;\text{m} \\
+		&= 3.3 \;\text{m （向上保留一位小数）} \notag 
+	\end{align}
+	为了便于设备的选型，堰宽取 $b=3.3$ m，则校核堰上水头：
+	\begin{align*}
+		H=\left(\dfrac{Q_3}{0.86b}\right)^{\frac{2}{3}} = \left(\dfrac{0.539}{0.86\times 3.3}\right)^{\frac{2}{3}} \;\text{m} =\eval{\left(\dfrac{0.539}{0.86\times 3.3}\right)^{\frac{2}{3}}} \;\text{m}
+	\end{align*}
+
+	% \textcolor{red}{选用电动可调节堰门,通径2.0m×0.5m。（待验证）}
+
+	考虑可调节堰的安装要求，堰两边各留 0.4 m 的操炸距离。则出水竖井长为
+	\begin{equation}
+		L=0.4\times 2 + b =0.4\times 2 + 3.3 \;\text{m} = 4.1 \;\text{m}
+	\end{equation}
+	出水竖井宽度取 $B=1.6$ m（满足安装要求），则出水竖井平面尺寸为 $L\times B=2.8\text{m}\times 1.6\text{m}$，氧化沟出水孔尺寸为 $b\times h=2.0\text{m}\times 0.5\text{m}$。
+
+	单组反应池出水管设计流量
+	\begin{equation}
+		Q_4=Q_1+Q_R=0.336+0.203 \;\text{m$^3$/s} =0.539 \;\text{m$^3$/s} 
+	\end{equation}
+	假定管道流速 $v=0.8$ m/s，则管径
+	\begin{align}
+		D=\sqrt{\dfrac{4Q_4}{\pi v}} &=\sqrt{\dfrac{4\times 0.539}{\pi \cdot 0.8}} \;\text{m} =\eval{\sqrt{\dfrac{4\times 0.539}{\pi \cdot 0.8}}} \;\text{m} \\
+		&= 950 \;\text{mm （向上取整）} \notag
+	\end{align}
+	则取回流污泥管 DN950 mm，并对管道流速进行校核：
+	\begin{align*}
+		v=\dfrac{Q}{A}=\dfrac{4Q_4}{\pi D^2} = \dfrac{4\times 0.539}{\pi \cdot 0.95^2} \;\text{m/s} = \eval{\dfrac{4\times 0.539}{\pi\cdot 0.95^2}}[2] \;\text{m/s}
+	\end{align*}
+
+	\item 内回流计算
+	
+	为使反硝化脱氮效果达到最佳，在好氧区与缺氧区间设置内回流渠，并设置内回流门，对混合液内回流流量进行控制。
+
+	因为混合内回流比 $R_{\text{内}}=100\%\sim 400\%$，则内回流流量为
+	\begin{align}
+		Q_{\text{内}}=R_{\text{内}}\cdot Q_{\text{单}} &=(100\%\sim 400\%)\times \dfrac{17500}{86400} \;\text{m$^3$/s} \\
+        &= (0.203\sim 0.810) \;\text{m$^3$/s} \notag
+	\end{align}
+	% \textcolor{red}{的回流控制门通径0.6mm×0.6t。（待验证）}
+\end{enumerate}
+
+

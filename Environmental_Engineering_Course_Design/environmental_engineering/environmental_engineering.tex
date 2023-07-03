@@ -1,0 +1,108 @@
+% !TeX encoding = UTF8
+% !TeX program = xelatex
+\documentclass[hyperref,a4paper,cs4size,UTF8]{ctexart}                 %-- cs4size：小四号字
+
+\usepackage{myletter} % 引用自定义的 myletter.sty 宏包
+\usepackage{Genshinbox} % 引用自定义的 Genshinbox.sty 宏包
+\usepackage{pgfornament} % 提供了许多装饰性的图案元素，如边框、分隔符、装饰文本等。
+\usetikzlibrary{patterns}
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{smartdiagram} % 流程图宏包
+\usetikzlibrary{shapes, arrows, positioning}
+\usepackage{pdfpages}
+
+\newcommand{\thumbnail}[1]{%
+	\newpage
+	\subsection*{缩略图【#1】}%
+	\addcontentsline{toc}{subsection}{缩略图【#1】}%
+	\addcontentsline{lof}{figure}{缩略图【#1】}
+}
+
+
+% 设置变量
+\newcommand\workQ{405.903}
+\newcommand\workKz{1.66}
+\newcommand\workQmax{0.672} % m3/s
+
+
+
+%%%-----------------------------------------------------------%%%
+\begin{document}
+\input{data/cover.tex} % 引入 cover.tex 文件（封面目录）
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%正文开始%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%============================设计说明书============================%
+\Genshinsection{设计说明书}
+\input{data/DesignDescriptionSection.tex} % 设计说明书部分
+%============================计算说明书============================%
+\Genshinsection{计算说明书}
+\section{处理构筑物设计及选型}
+\input{data/grille.tex} % 格栅设计部分
+\input{data/grit_tank.tex} % 沉砂池设计部分
+\input{data/oxidation_ditch.tex} % 氧化沟工艺部分
+\input{data/secondary_sedimentation_tank.tex} % 二沉池部分
+\input{data/sludge.tex} % 污泥浓缩部分
+\input{data/disinfect.tex} % 消毒池部分
+\input{data/pump_station.tex} % 泵站（房）设计部分
+% \subsection{除臭装置}
+\newpage
+\section{厂区总图设计}
+\input{data/pipe.tex} % 管道计算部分
+\input{data/elevation.tex} % 高程图部分
+% \subsection{设备选型}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%正文结束%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{myconclusion} %% 已自动前置 \newpage
+	% 实践是检验真理的唯一标准！
+	在完成《环境工程课程设计》课程的过程中，我积累了丰富的实践经验，获得了宝贵的收获。这门实训课程不仅使我更加深入地理解了环境工程的理论知识，还让我亲身体验了一个模拟实际的工程设计与解决环境问题的过程。在此过程中，我学到了许多关键的技能和重要的教训。
+
+	通过这门实训课程，我学会了如何运用所学的环境知识解决实际问题。在课程中，我们完成了污水处理厂的设计，从问题定义到解决方案的提出，再到计算和画图，我们经历了一个完整的设计过程。这锻炼了我的分析和解决问题的能力，也提高了我在环境工程领域的实践能力。同时，我也认识到环境的重要性及其对社会可持续发展的贡献。环境问题日益严峻，而环境工程师在解决这些问题中发挥着重要作用。这也让我对环境工程的热情更加坚定，决心将来投身于这个领域，为改善环境质量贡献自己的力量。
+	
+	与团队合作是实训过程中至关重要的一部分。我与我的团队成员紧密合作，共同协作解决了各种设计难题。在这个过程中，我学会了如何与他人有效沟通、协调不同意见，并充分发挥每个团队成员的优势。这不仅培养了我的团队合作能力，还加强了我在团队中工作的能力。
+
+	总的来说，完成《环境工程课程设计》是我大学生涯中的重要经历，带给我许多宝贵的收获。通过自由讨论实践，我不仅深化了对环境工程理论的理解，还培养了解决实际问题、团队合作、资料查找和数据分析的能力。这些收获将对我的未来学习和职业发展产生积极的影响，使我更好地为社会和环境做出贡献。
+
+	\vfill
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{school_badge/study.jpg}
+	\end{center}
+
+\end{myconclusion}
+% %%%%%%%%%%%%%%%%% 参考文献部分 %%%%%%%%%%%%%%%%%
+\newpage
+\addcontentsline{toc}{section}{参考文献}
+\bibliographystyle{unsrt}
+\bibliography{reference}
+% 致谢
+\begin{mythanks} %% 已自动前置 \newpage
+	% 感谢所有给予我帮助、鼓励和支持的人！
+	经过两周的《环境工程课程设计》课程的学习，我们小组六人通力合作，成功完成了污水处理厂的设计，也掌握了很多污水处理厂设计方面相关的知识。
+	% \begin{center}
+	% 	\includegraphics[width=0.3\textwidth]{school_badge/guaiqiao.png} 
+	% \end{center}
+
+	我要衷心感谢所有老师在整个课程中给予的悉心指导和宝贵的建议，为我们的设计提供了坚实的基础，并使我们能够更好地理解和应用环境工程的原理和方法。老师们耐心而细致的指导帮助我们解决了许多难题，拓展了我们的思维，提高了我们的设计水平。
+	% 我还要感谢课程中的其他教师和助教们，他们在课程中给予我们的指导和帮助，使我们能够更好地理解和掌握所学的知识。他们的辛勤付出和耐心解答让我们能够顺利完成设计任务，并在学习中取得进步。
+	同时，我要感谢小组内每一位成员的付出和努力。在整个设计过程中，每个人都充分发挥了自己的专长和能力，紧密合作，共同克服了各种困难和挑战。大家互相协作、互相支持，共同为设计的完善和顺利完成而努力奋斗。
+	最后，我还要感谢学校和相关部门提供的资源和支持。没有这些支持和条件，我们将无法顺利进行设计工作。感谢学校为我们提供了良好的学习环境和机会，让我们能够在实践中提升自己的专业能力。
+	
+	再次表达我最诚挚的谢意和感激之情。这次课程设计是我们小组的宝贵经验，我将继续努力，不断学习和进步。相信在老师们的引领和指导下，我们的环境工程之路会越走越宽广！
+
+	\vfill
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{school_badge/guaiqiao1.png}
+	\end{center}
+	\vfill
+	\noindent\dotfill
+
+	\noindent$\bullet$ 校园邮箱：\href{mailto:andeli@stu.cdut.edu.cn}{andeli@stu.cdut.edu.cn}
+
+	\noindent$\bullet$ 设计计算说明书 \LaTeX 源码\hypertarget{mythankslink}{}
+	：\url{https://github.com/a-small-Andry/college_life/tree/main/Environmental_Engineering_Course_Design}
+\end{mythanks}
+% %%%%%%%%%%%%%%%%% CAD设计图集 %%%%%%%%%%%%%%%%%
+\newpage
+\Genshinsection{设计图集}
+% \mysection{设计图集}
+\input{data/CAD.tex} % CAD图纸
+
+\end{document}

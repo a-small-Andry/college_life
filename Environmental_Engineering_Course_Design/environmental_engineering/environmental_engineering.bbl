@@ -1,0 +1,78 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[GB1(2002)]{GB189182002}
+城镇污水处理厂污染物排放标准: GB 18918-2002[S].
+\newblock 北京: 中华人民共和国国家环境保护局, 2002.
+
+\bibitem[DB5(2016)]{DB5123112016}
+四川省岷江、沱江流域水污染物排放标准: DB51/2311-2016[S].
+\newblock 北京: 中华人民共和国环境保护部, 2016.
+
+\bibitem[GB5(2019)]{GB500152019}
+建筑给水排水设计标准: GB 50015-2019[S].
+\newblock 北京: 中华人民共和国住房和城乡建设部, 2019.
+
+\bibitem[张辰(2010)]{《污水厂设计》}
+张辰.
+\newblock 污水厂设计[M].
+\newblock 北京: 中国建筑工业出版社, 2010.
+
+\bibitem[百度文库(2022)]{水力最优——《水力学》第六章}
+百度文库.
+\newblock 水力最优——《水力学》第六章[EB/OL].
+\newblock 2022\allowbreak[2023-05-22].
+\newblock
+  \url{https://wenku.baidu.com/view/538371aabad528ea81c758f5f61fb7360b4c2ba6.html?_wkts_=1684737868438}.
+
+\bibitem[高俊发\ 等(2003)高俊发 and
+  王社平]{《污水处理厂工艺设计手册》}
+高俊发, 王社平.
+\newblock 污水处理厂工艺设计手册[M].
+\newblock 北京: 化学工业出版社, 2003.
+
+\bibitem[刘振江\ 等(2017)刘振江 and
+  崔玉川]{《城市污水厂处理设施设计计算（第三版）》}
+刘振江, 崔玉川.
+\newblock 城市污水厂处理设施设计计算[M].
+\newblock 3 版.
+\newblock 北京: 化学工业出版社, 2017.
+
+\bibitem[GB5(2021)]{GB500142021}
+室外排水设计标准: GB 50014-2021[S].
+\newblock 北京: 中华人民共和国住房和城乡建设部, 2021.
+
+\bibitem[HJ2(2010)]{HJ2007-2010}
+污水气浮处理工程技术规范: HJ 2007-2010[S].
+\newblock 北京: 中华人民共和国环境保护部, 2010.
+
+\bibitem[全国勘察设计注册工程师公用设备专业管理委员会秘书处(2018)]{《第2册排水工程》}
+全国勘察设计注册工程师公用设备专业管理委员会秘书处.
+\newblock
+  全国勘察设计注册公用设备工程师给水排水专业执业资格考试教材:2018版.第2册,排水工程[M].
+\newblock 3 版.
+\newblock 北京: 中国建筑工业出版社, 2018.
+
+\bibitem[河北高通泵业有限公司(2023)]{QXG型潜水给水泵}
+河北高通泵业有限公司.
+\newblock QXG 型潜水给水泵[EB/OL].
+\newblock 2023\allowbreak[2023-07-01].
+\newblock \url{http://www.zgmpump.com/hbgtpump-Products-9724784/}.
+
+\bibitem[真空网(2018)]{水泵最大安装高度如何计算}
+真空网.
+\newblock 水泵最大安装高度如何计算，看完全明白了![EB/OL].
+\newblock 2018\allowbreak[2023-05-24].
+\newblock \url{https://zhuanlan.zhihu.com/p/48325411}.
+
+\end{thebibliography}
