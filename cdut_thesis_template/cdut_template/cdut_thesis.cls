@@ -172,20 +172,22 @@
 			\footstyle            %-- 设置刚刚定义好的页脚格式
 
 	%-- 中文摘要 --%
-	\newenvironment{chineseabstract}{                %-- 创建一个中文摘要的环境
-		\section*{\heiti{摘 \quad 要}}               %-- 将中文摘要作为不带编号的section，解决缩进问题。
+	\newenvironment{chineseabstract}{               %-- 创建一个中文摘要的环境
+		\phantomsection                              %-- 创建锚点
 		\addcontentsline{toc}{section}{摘 \quad 要}  %-- 将中文摘要手动加入目录
-	\thispagestyle{fancy}                            %-- 设置中文摘要的页眉页脚（根据它所在的奇偶页自动生成相应的页眉）
+		\section*{\heiti{摘 \quad 要}}               %-- 将中文摘要作为不带编号的section，解决缩进问题。
+	\thispagestyle{fancy}                           %-- 设置中文摘要的页眉页脚（根据它所在的奇偶页自动生成相应的页眉）
 		\fancyhead[CE]{\zihao{-5}\cdut}
 		\fancyhead[CO]{\zihao{-5}摘 \quad 要}
 		\fancyfoot[c]{\zihao{-5}\thepage}
 	}{\newpage }
 	
 	%-- 英文摘要 --%
-	\newenvironment{englishabstract}{               %-- 创建一个英文摘要的环境
-		\section*{ABSTRACT}                         %-- 将英文摘要作为不带编号的section，解决缩进问题。
+	\newenvironment{englishabstract}{              %-- 创建一个英文摘要的环境
+		\phantomsection                             %-- 创建锚点
 		\addcontentsline{toc}{section}{ABSTRACT}    %-- 将英文摘要手动加入目录
-	\thispagestyle{fancy}                           %-- 设置英文摘要的页眉页脚（根据它所在的奇偶页自动生成相应的页眉）
+		\section*{ABSTRACT}                         %-- 将英文摘要作为不带编号的section，解决缩进问题。
+	\thispagestyle{fancy}                          %-- 设置英文摘要的页眉页脚（根据它所在的奇偶页自动生成相应的页眉）
 		\fancyhead[CE]{\zihao{-5}\cdut}
 		\fancyhead[CO]{\zihao{-5}ABSTRACT}
 		\fancyfoot[c]{\zihao{-5}\thepage}
@@ -193,6 +195,7 @@
 	
 	%-- 结论 --%
 	\newenvironment{conclusion}{                     %-- 创建一个结论的环境
+		\phantomsection                             %-- 创建锚点
 		\addcontentsline{toc}{section}{结 \quad 论}  %-- 将结论手动加入目录
 		\section*{\heiti\zihao{-2}{结 \quad 论}}     %-- 将结论作为不带编号的section，解决缩进问题。
 	\thispagestyle{fancy}                            %-- 设置结论的页眉页脚（根据它所在的奇偶页自动生成相应的页眉）
@@ -203,6 +206,7 @@
 	
 	%-- 致谢 --%
 	\newenvironment{mythanks}{                       %-- 创建一个致谢的环境
+		\phantomsection                             %-- 创建锚点
 		\addcontentsline{toc}{section}{致 \quad 谢}  %-- 将致谢手动加入目录
 		\section*{\heiti\zihao{-2}{致 \quad 谢}}     %-- 将致谢作为不带编号的section，解决缩进问题。
 	\thispagestyle{fancy}                            %-- 设置致谢的页眉页脚（根据它所在的奇偶页自动生成相应的页眉）
@@ -229,6 +233,7 @@
 
 	%-- 中文摘要 --%
 	\newenvironment{chineseabstract}{
+		\phantomsection                             %-- 创建锚点
 		\addcontentsline{toc}{section}{摘 \quad 要}
 		\section*{\heiti{摘 \quad 要}}               % 将中文摘要作为不带编号的section，解决缩进问题。
 	\thispagestyle{fancy}                           % 设置中文摘要的页眉页脚
@@ -239,6 +244,7 @@
 	
 	%-- 英文摘要 --%
 	\newenvironment{englishabstract}{
+		\phantomsection                             %-- 创建锚点
 		\addcontentsline{toc}{section}{ABSTRACT}
 		\section*{ABSTRACT}               % 将英文摘要作为不带编号的section，解决缩进问题。
 	\thispagestyle{fancy}                           % 设置英文摘要的页眉页脚
@@ -249,6 +255,7 @@
 	
 	%-- 结论 --%
 	\newenvironment{conclusion}{
+		\phantomsection                             %-- 创建锚点
 		\addcontentsline{toc}{section}{结 \quad 论}
 		\section*{\heiti\zihao{-2}{结 \quad 论}}     % 将结论作为不带编号的section，解决缩进问题。
 	\thispagestyle{fancy}                           % 设置结论的页眉页脚
@@ -259,6 +266,7 @@
 	
 	%-- 致谢 --%
 	\newenvironment{mythanks}{
+		\phantomsection                             %-- 创建锚点
 		\addcontentsline{toc}{section}{致 \quad 谢}
 		\section*{\heiti\zihao{-2}{致 \quad 谢}}     % 将致谢作为不带编号的section，解决缩进问题。
 	\thispagestyle{fancy}                           % 设置致谢的页眉页脚
